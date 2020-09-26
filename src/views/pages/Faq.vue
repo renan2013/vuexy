@@ -3,15 +3,15 @@
         <!-- JUMBOTRON -->
         <div class="faq-jumbotron">
             <div class="faq-jumbotron-content lg:p-32 md:p-24 sm:p-16 p-8 rounded-lg mb-base">
-                <h1 class="mb-1 text-white">Have Any Questions?</h1>
-                <p class="text-white">Bonbon sesame snaps lemon drops marshmallow ice cream carrot cake croissant wafer.</p>
-                <vs-input placeholder="Search" v-model="faqSearchQuery" icon-pack="feather" icon="icon-search" size="large" class="w-full mt-6" icon-no-border />
+                <h1 class="mb-1 text-white">Tiene alguna pregunta?</h1>
+                <p class="text-white">Escríbanos su pregunta.</p>
+                <vs-input placeholder="Buscar" v-model="faqSearchQuery" icon-pack="feather" icon="icon-search" size="large" class="w-full mt-6" icon-no-border />
             </div>
         </div>
         <div class="vx-row">
             <div class="vx-col w-full md:w-2/5 lg:w-1/4 rounded-lg">
                 <vx-card>
-                    <h4>Table of Content</h4>
+                    <h4>Contenido de Preguntas</h4>
                     <ul class="faq-topics mt-4">
                         <li v-for="category in categories" :key="category.id" class="p-2 font-medium flex items-center" @click="faqFilter = category.id">
                             <div class="h-3 w-3 rounded-full mr-2" :class="'bg-' + category.color"></div><span class="cursor-pointer">{{ category.name }}</span>
@@ -48,28 +48,18 @@ export default{
       categories: [
         {
           id: 1,
-          name: 'All',
+          name: 'Todo',
           color: 'grey'
         },
         {
           id: 2,
-          name: 'General',
+          name: 'Cursos Libres',
           color: 'primary'
         },
         {
           id: 3,
-          name: 'Licenses',
+          name: 'Técnicos',
           color: 'success'
-        },
-        {
-          id: 4,
-          name: 'Company usage',
-          color: 'warning'
-        },
-        {
-          id: 5,
-          name: 'Trademark use',
-          color: 'danger'
         }
       ],
       faqs: [
@@ -192,8 +182,7 @@ export default{
         if (this.faqFilter === 1) return faq.question.toLowerCase().includes(this.faqSearchQuery.toLowerCase()) || faq.ans.toLowerCase().includes(this.faqSearchQuery.toLowerCase())
         else if (this.faqFilter === 2) return faq.categoryId === 2 && (faq.question.toLowerCase().includes(this.faqSearchQuery.toLowerCase()) || faq.ans.toLowerCase().includes(this.faqSearchQuery.toLowerCase()))
         else if (this.faqFilter === 3) return faq.categoryId === 3 && (faq.question.toLowerCase().includes(this.faqSearchQuery.toLowerCase()) || faq.ans.toLowerCase().includes(this.faqSearchQuery.toLowerCase()))
-        else if (this.faqFilter === 4) return faq.categoryId === 4 && (faq.question.toLowerCase().includes(this.faqSearchQuery.toLowerCase()) || faq.ans.toLowerCase().includes(this.faqSearchQuery.toLowerCase()))
-        else if (this.faqFilter === 5) return faq.categoryId === 5 && (faq.question.toLowerCase().includes(this.faqSearchQuery.toLowerCase()) || faq.ans.toLowerCase().includes(this.faqSearchQuery.toLowerCase()))
+     
       })
     }
   },
