@@ -49,7 +49,7 @@ export default [
       }
     ]
   },
-  
+
   {
     header: 'Apps',
     icon: 'PackageIcon',
@@ -782,44 +782,44 @@ export default [
       }
     ]
   },
- 
+
   {
     url: null,
     name: 'Menu',
     tag: '2',
     tagColor: 'warning',
     icon: 'HomeIcon',
-   
+
     submenu: [
       {
         url: '/pages/profile',
         name: 'Quienes somos',
         slug: 'dashboard-analytics',
-        
+
       },
       {
         url: '/apps/eCommerce/wish-list',
         name: 'Lista de Categoría',
         slug: 'dashboard-ecommerce',
-        
+
       },
       {
         url: '/apps/eCommerce/item/',
         name: 'Desarrollo del Item',
         slug: 'dashboard-ecommerce',
-        
+
       },
       {
         url: '/charts-and-maps/maps/google-map',
         name: 'Ubicación',
         slug: 'dashboard-ecommerce',
-        
+
       },
       {
-        url: '/components/tabs',
+        url: '/pages/faq',
         name: 'Preguntas frecuentes',
         slug: 'dashboard-ecommerce',
-        
+
       }
     ]
   },
