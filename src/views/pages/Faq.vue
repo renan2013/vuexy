@@ -1,13 +1,3 @@
-]<!-- =========================================================================================
-    File Name: Faq.vue
-    Description: FAQ Page
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-      Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
-
-
 <template>
     <div id="faq-page">
         <!-- JUMBOTRON -->
@@ -30,18 +20,7 @@
 
                     <br><br>
 
-                    <h4>Supporters</h4>
-                    <ul class="faq-supporters mt-4">
-                        <li v-for="supporter in supporters" :key="supporter.id" class="mt-4">
-                            <div class="flex items-center">
-                                <vs-avatar class="mr-3" :src="supporter.img" size="35px" />
-                                <div class="leading-tight">
-                                    <p class="font-semibold">{{ supporter.name }}</p>
-                                    <small>{{ supporter.profession }}</small>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    
                 </vx-card>
             </div>
 
